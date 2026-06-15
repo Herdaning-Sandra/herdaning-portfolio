@@ -52,7 +52,7 @@ export default function Show() {
                 <div className="absolute left-1/2 top-[1000px] h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-blue-500/10 blur-[160px]" />
             </div>
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(6,182,212,0.08),transparent_50%),radial-gradient(circle_at_bottom_right,rgba(168,85,247,0.08),transparent_50%)]" />
-            <div className="relative mx-auto max-w-6xl px-6 py-20">
+            <div className="relative mx-auto max-w-6xl px-5 py-16 md:px-6 md:py-20">
                 <Link href="/" className="mb-8 inline-block text-cyan-400">
                     ← Back to Portfolio
                 </Link>
@@ -66,7 +66,7 @@ export default function Show() {
                 <div className="grid gap-12 lg:grid-cols-2">
                     {/* LEFT */}
                     <div>
-                        <h1 className="text-5xl font-bold leading-tight">
+                        <h1 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
                             {project.title}
                         </h1>
 

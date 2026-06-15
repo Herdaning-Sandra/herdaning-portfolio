@@ -163,7 +163,7 @@ function Hero({ isLight }) {
     return (
         <section
             id="home"
-            className="mx-auto grid min-h-[90vh] max-w-7xl items-center gap-14 px-6 py-20 lg:grid-cols-2"
+            className="mx-auto grid min-h-[90vh] max-w-7xl items-center gap-10 px-6 py-24 lg:grid-cols-2"
         >
             <motion.div
                 initial={{ opacity: 0, y: 35 }}
@@ -171,7 +171,7 @@ function Hero({ isLight }) {
                 transition={{ duration: 0.7 }}
             >
                 <div
-                    className={`mb-6 mt-6 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm ${
+                    className={`mb-6 mt-6 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs sm:text-sm ${
                         isLight
                             ? "border-emerald-300 bg-emerald-100 text-emerald-600"
                             : "border-emerald-400/20 bg-emerald-400/10 text-emerald-300"
@@ -181,7 +181,7 @@ function Hero({ isLight }) {
                     Available for Remote & Freelance
                 </div>
 
-                <h1 className="text-4xl font-black leading-tight md:text-5xl xl:text-5xl">
+                <h1 className="text-[2rem] font-black leading-tight sm:text-4xl md:text-5xl">
                     <span className="whitespace-nowrap">
                         Hi, I'm{" "}
                         <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
@@ -191,7 +191,7 @@ function Hero({ isLight }) {
                 </h1>
 
                 <h2
-                    className={`mt-5 text-2xl font-semibold md:text-3xl ${
+                    className={`mt-5 text-xl font-semibold sm:text-2xl md:text-3xl ${
                         isLight ? "text-cyan-500" : "text-cyan-300"
                     }`}
                 >
@@ -199,7 +199,7 @@ function Hero({ isLight }) {
                 </h2>
 
                 <p
-                    className={`mt-6 max-w-xl text-justify text-lg leading-relaxed hyphens-auto ${
+                    className={`mt-6 max-w-xl text-justify text-base leading-relaxed md:text-lg hyphens-auto ${
                         isLight ? "text-slate-600" : "text-slate-400"
                     }`}
                 >
@@ -214,7 +214,7 @@ function Hero({ isLight }) {
                         (tech) => (
                             <span
                                 key={tech}
-                                className="rounded-full border border-cyan-400/20 bg-white/5 px-3 py-1 text-sm text-slate-300 backdrop-blur-sm"
+                                className="rounded-full border border-cyan-400/20 bg-white/5 px-3 py-1 text-xs sm:text-sm text-slate-300 backdrop-blur-sm"
                             >
                                 {tech}
                             </span>
@@ -222,10 +222,10 @@ function Hero({ isLight }) {
                     )}
                 </div>
 
-                <div className="mt-8 flex flex-wrap gap-4">
+                <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
                     <a
                         href="#projects"
-                        className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 px-8 py-4 font-semibold text-white transition hover:scale-105"
+                        className="inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 px-8 py-4 font-semibold text-white transition hover:scale-105"
                     >
                         See My Projects
                         <ArrowRight size={18} />
@@ -235,7 +235,7 @@ function Hero({ isLight }) {
                         href="https://wa.me/628985032477?text=Hello%20Sandra,%20I%20am%20interested%20in%20connecting%20with%20you%20after%20viewing%20your%20portfolio."
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`inline-flex items-center gap-2 rounded-xl border px-6 py-3 font-semibold transition ${
+                        className={`inline-flex items-center justify-center gap-2 rounded-xl border px-6 py-3 font-semibold transition ${
                             isLight
                                 ? "border-slate-300 bg-white text-slate-700 shadow-md shadow-slate-200 hover:border-cyan-400 hover:text-cyan-500"
                                 : "border-white/15 bg-white/5 text-slate-200 hover:border-cyan-400 hover:text-cyan-300"
@@ -244,10 +244,11 @@ function Hero({ isLight }) {
                         Contact Me
                         <MessageCircle size={18} />
                     </a>
+
                     <a
                         href="/Herdaning-Sandra-CV.pdf"
                         download
-                        className={`inline-flex items-center gap-2 rounded-xl border px-6 py-3 font-semibold transition ${
+                        className={`inline-flex items-center justify-center gap-2 rounded-xl border px-6 py-3 font-semibold transition ${
                             isLight
                                 ? "border-slate-300 bg-white text-slate-700 shadow-md shadow-slate-200 hover:border-cyan-400 hover:text-cyan-500"
                                 : "border-white/15 bg-white/5 text-slate-200 hover:border-cyan-400 hover:text-cyan-300"
@@ -265,32 +266,34 @@ function Hero({ isLight }) {
                 transition={{ duration: 0.8 }}
                 className="relative"
             >
-                <div className="relative mx-auto max-w-[540px] rounded-[1.8rem] border border-cyan-400/30 bg-white/5 p-4 shadow-2xl shadow-cyan-500/10 backdrop-blur-xl">
+                <div className="relative mx-auto w-full max-w-[540px] rounded-[1.8rem] border border-cyan-400/30 bg-white/5 p-4 shadow-2xl shadow-cyan-500/10 backdrop-blur-xl">
                     <div className="absolute inset-0 rounded-[1.8rem] bg-gradient-to-br from-cyan-400/10 to-purple-600/10" />
 
-                    <div className="relative flex min-h-[430px] items-center justify-center overflow-hidden rounded-[1.4rem] border border-white/10 bg-slate-950">
-                        <div className="absolute left-1/2 top-1/2 h-[340px] w-[340px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-cyan-500/25 to-purple-600/35 blur-sm" />
+                    <div className="relative flex min-h-[350px] sm:min-h-[430px] items-center justify-center overflow-hidden rounded-[1.4rem] border border-white/10 bg-slate-950">
+                        <div className="absolute left-1/2 top-1/2 h-[260px] w-[260px] sm:h-[340px] sm:w-[340px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-cyan-500/25 to-purple-600/35 blur-sm" />
 
-                        <span className="absolute left-10 top-10 h-2 w-2 rounded-full bg-cyan-400 shadow-lg shadow-cyan-400/50" />
-                        <span className="absolute right-20 bottom-20 h-2 w-2 rounded-full bg-purple-400 shadow-lg shadow-purple-400/50" />
+                        <span className="absolute left-6 top-6 h-2 w-2 rounded-full bg-cyan-400 shadow-lg shadow-cyan-400/50" />
+                        <span className="absolute right-10 bottom-16 h-2 w-2 rounded-full bg-purple-400 shadow-lg shadow-purple-400/50" />
 
-                        <div className="absolute left-6 top-6 z-20 rounded-2xl border border-white/10 bg-slate-900/80 p-4 shadow-lg backdrop-blur-xl">
-                            <Code2 className="text-cyan-300" />
+                        <div className="absolute left-4 top-4 z-20 rounded-2xl border border-white/10 bg-slate-900/80 p-3 shadow-lg backdrop-blur-xl sm:left-6 sm:top-6 sm:p-4">
+                            <Code2 className="text-cyan-300" size={22} />
                         </div>
 
-                        <div className="absolute right-6 top-6 z-20 w-[145px] rounded-2xl border border-purple-400/20 bg-slate-950/85 px-4 py-3 text-left shadow-xl shadow-purple-500/20 backdrop-blur-xl">
-                            <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-purple-300">
+                        <div className="absolute right-3 top-3 z-20 w-[120px] sm:w-[145px] rounded-2xl border border-purple-400/20 bg-slate-950/85 px-3 py-2 sm:px-4 sm:py-3 text-left shadow-xl shadow-purple-500/20 backdrop-blur-xl">
+                            <p className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.25em] text-purple-300">
                                 Student
                             </p>
-                            <h3 className="mt-1 text-sm font-bold leading-snug text-white">
+
+                            <h3 className="mt-1 text-xs sm:text-sm font-bold leading-snug text-white">
                                 Informatics
                             </h3>
-                            <p className="mt-1 text-xs leading-relaxed text-slate-400">
+
+                            <p className="mt-1 text-[10px] sm:text-xs leading-relaxed text-slate-400">
                                 Web • UI • Database
                             </p>
                         </div>
 
-                        <div className="absolute right-8 top-[132px] z-20 flex items-center gap-2 rounded-full border border-emerald-400/20 bg-slate-950/85 px-4 py-2 text-xs font-medium text-emerald-300 shadow-lg shadow-emerald-500/20 backdrop-blur-xl">
+                        <div className="absolute right-4 top-[95px] sm:right-8 sm:top-[132px] z-20 flex items-center gap-2 rounded-full border border-emerald-400/20 bg-slate-950/85 px-3 py-2 text-[10px] sm:text-xs font-medium text-emerald-300 shadow-lg shadow-emerald-500/20 backdrop-blur-xl">
                             <span className="h-2 w-2 rounded-full bg-emerald-400" />
                             Open to Work
                         </div>
@@ -298,29 +301,29 @@ function Hero({ isLight }) {
                         <img
                             src="/images/sandra.png"
                             alt="Herdaning Sandra Kumalasari"
-                            className="absolute bottom-0 left-1/2 z-10 h-[385px] w-auto -translate-x-[42%] object-contain drop-shadow-2xl"
+                            className="absolute bottom-0 left-1/2 z-10 h-[280px] sm:h-[340px] md:h-[385px] w-auto -translate-x-[42%] object-contain drop-shadow-2xl"
                         />
 
-                        <div className="absolute bottom-8 left-7 z-20 rounded-2xl border border-cyan-400/20 bg-slate-950/85 px-4 py-3 text-left shadow-2xl shadow-cyan-500/20 backdrop-blur-xl">
-                            <h3 className="text-base font-bold text-white">
+                        <div className="absolute bottom-4 left-4 sm:bottom-8 sm:left-7 z-20 rounded-2xl border border-cyan-400/20 bg-slate-950/85 px-3 py-2 sm:px-4 sm:py-3 text-left shadow-2xl shadow-cyan-500/20 backdrop-blur-xl">
+                            <h3 className="text-sm sm:text-base font-bold text-white">
                                 Web Developer
                             </h3>
 
-                            <p className="mt-1 text-xs text-slate-400">
+                            <p className="mt-1 text-[10px] sm:text-xs text-slate-400">
                                 JavaScript • Laravel • React
                             </p>
 
                             <div className="mt-3 flex items-center gap-2">
-                                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-yellow-500/10 text-yellow-400">
-                                    <SiJavascript size={17} />
+                                <span className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-lg bg-yellow-500/10 text-yellow-400">
+                                    <SiJavascript size={16} />
                                 </span>
 
-                                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-red-500/10 text-red-400">
-                                    <SiLaravel size={17} />
+                                <span className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-lg bg-red-500/10 text-red-400">
+                                    <SiLaravel size={16} />
                                 </span>
 
-                                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-cyan-500/10 text-cyan-400">
-                                    <SiReact size={17} />
+                                <span className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-lg bg-cyan-500/10 text-cyan-400">
+                                    <SiReact size={16} />
                                 </span>
                             </div>
                         </div>
@@ -418,7 +421,7 @@ function About({ isLight }) {
     ];
 
     return (
-        <section id="about" className="relative overflow-hidden py-10">
+        <section id="about" className="relative overflow-hidden py-16 md:py-20">
             <NeonSectionBackground isLight={isLight} />
 
             <div className="relative z-10 mx-auto max-w-7xl px-6">
@@ -437,7 +440,7 @@ function About({ isLight }) {
                         </div>
 
                         <h2
-                            className={`mt-3 text-3xl font-bold md:text-4xl ${
+                            className={`mt-3 text-2xl font-bold md:text-4xl ${
                                 isLight ? "text-slate-900" : "text-white"
                             }`}
                         >
@@ -446,13 +449,13 @@ function About({ isLight }) {
                     </div>
 
                     <div
-                        className={`rounded-3xl border p-6 shadow-2xl backdrop-blur-xl md:p-10 ${
+                        className={`rounded-3xl border p-5 shadow-2xl backdrop-blur-xl sm:p-6 md:p-10 ${
                             isLight
                                 ? "border-slate-200 bg-white/85 shadow-slate-200/70"
                                 : "border-cyan-400/25 bg-slate-950/50 shadow-cyan-500/10"
                         }`}
                     >
-                        <div className="grid gap-8 lg:grid-cols-[1.45fr_1fr]">
+                        <div className="grid gap-8 lg:grid-cols-[1.45fr_1fr] items-start">
                             <div className="flex gap-5">
                                 <div
                                     className={`hidden h-20 w-20 shrink-0 items-center justify-center rounded-2xl border md:flex ${
@@ -466,7 +469,7 @@ function About({ isLight }) {
 
                                 <div>
                                     <p
-                                        className={`mt-1 text-justify text-base leading-relaxed md:text-lg ${
+                                        className={`mt-1 text-justify text-sm leading-relaxed sm:text-base md:text-lg ${
                                             isLight
                                                 ? "text-slate-600"
                                                 : "text-slate-300"
@@ -500,7 +503,7 @@ function About({ isLight }) {
                             </div>
 
                             <div
-                                className={`rounded-2xl border p-5 ${
+                                className={`rounded-2xl border p-4 sm:p-5 ${
                                     isLight
                                         ? "border-slate-200 bg-slate-50"
                                         : "border-white/10 bg-slate-950/45"
@@ -511,7 +514,7 @@ function About({ isLight }) {
                                         ({ icon: Icon, label, value }) => (
                                             <div
                                                 key={label}
-                                                className={`flex items-center justify-between gap-6 border-b pb-3 last:border-b-0 last:pb-0 ${
+                                                className={`flex flex-col items-start justify-between gap-2 border-b pb-3 last:border-b-0 last:pb-0 sm:flex-row sm:items-center sm:gap-6 ${
                                                     isLight
                                                         ? "border-slate-200"
                                                         : "border-white/10"
@@ -540,7 +543,7 @@ function About({ isLight }) {
                                                 </div>
 
                                                 <p
-                                                    className={`whitespace-nowrap text-right text-sm font-semibold ${
+                                                    className={`text-left sm:text-right text-sm font-semibold break-words ${
                                                         isLight
                                                             ? "text-slate-800"
                                                             : "text-slate-100"
@@ -562,7 +565,7 @@ function About({ isLight }) {
                                     ].map((skill) => (
                                         <span
                                             key={skill}
-                                            className={`rounded-full border px-3 py-1 text-xs font-semibold ${
+                                            className={`rounded-full border px-3 py-1 text-[11px] sm:text-xs font-semibold ${
                                                 isLight
                                                     ? "border-cyan-200 bg-cyan-50 text-cyan-600"
                                                     : "border-cyan-400/20 bg-cyan-400/10 text-cyan-300"
